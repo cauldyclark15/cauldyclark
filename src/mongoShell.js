@@ -1,3 +1,5 @@
+// mongo node connection : 
+
 db.users.insertMany([
     {
         name: "kim",

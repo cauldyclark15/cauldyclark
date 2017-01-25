@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-let port = normalizePort(process.env.PORT || '3000');
+let port = normalizePort(process.env.PORT || '5000');
 
 app.use(express.static('./build'));
 
