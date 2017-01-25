@@ -19,7 +19,7 @@ const receivePosts = (customers) => ({
 /* ASYNC */
 const fetchCustomers = () => {
   return (dispatch) => {
-    return fetch('http://localhost:1515/customers.json')
+    return fetch('http://localhost:3000/customers.json')
       .then(response => {
         return response.json();
       })
