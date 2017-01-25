@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-let port = 1515;
+let port = normalizePort(process.env.PORT || '3000');
 
 app.use(express.static('./build'));
 
@@ -12,6 +12,19 @@ app.get('/', (req, res) => {
 });
 
 const url = 'mongodb://cauldyclark:kVR6hIGqt8qSte4yYDRN5LJut21O8vEkEYLRRJs3Z3enaNFdwlRtfklvWZVtLxvhB0X4cTsidzutF5uVV54BUQ==@cauldyclark.documents.azure.com:10250/store?ssl=true';
+
+function normalizePort(val) {
+    var port = parseInt(val, 10);
+    if (isNaN(port)) {
+        // named pipe
+        return val;
+    }
+    if (port >= 0) {
+        // port number
+        return port;
+    }
+    return false;
+}
 
 MongoClient.connect(url, (err, db) => {
     assert.equal(null, err);
