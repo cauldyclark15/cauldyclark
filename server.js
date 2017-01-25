@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
     res.sendfile(path.join(__dirname, './build', 'index.html'));
 });
 
-const url = 'mongodb://cauldyclark15:Fastest15@localhost:27017/store';
+const url = 'mongodb://cauldyclark:kVR6hIGqt8qSte4yYDRN5LJut21O8vEkEYLRRJs3Z3enaNFdwlRtfklvWZVtLxvhB0X4cTsidzutF5uVV54BUQ==@cauldyclark.documents.azure.com:10250/store?ssl=true';
 
 MongoClient.connect(url, (err, db) => {
     assert.equal(null, err);

@@ -10,3 +10,5 @@ coverage
 .DS_Store
 .env
 npm-debug.log
+
+# mongo.exe cauldyclark.documents.azure.com:10250 -u cauldyclark -p kVR6hIGqt8qSte4yYDRN5LJut21O8vEkEYLRRJs3Z3enaNFdwlRtfklvWZVtLxvhB0X4cTsidzutF5uVV54BUQ== --ssl --sslAllowInvalidCertificates
