@@ -1,0 +1,14 @@
+[
+  {
+    "cloudName": "AzureCloud",
+    "id": "f2a08dd1-41d8-4188-91f0-47f78f3d64a8",
+    "isDefault": true,
+    "name": "Free Trial",
+    "state": "Enabled",
+    "tenantId": "014f8f6e-1124-406b-b699-892fcc478a7d",
+    "user": {
+      "name": "jcing.jc@hotmail.com",
+      "type": "user"
+    }
+  }
+]
