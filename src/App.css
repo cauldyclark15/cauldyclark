@@ -1,0 +1,11 @@
+.customer {
+    color: green;
+    height: 90px;
+    width: 90px;
+    background-color: whitesmoke;
+    border: 1px solid red;
+}
+
+.data {
+    text-align: center;
+}

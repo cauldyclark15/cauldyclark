@@ -31,12 +31,15 @@ MongoClient.connect(url, (err, db) => {
     console.log('Connected correctly to server');
 
     let col = db.collection('customers');
-    
+
+    // in case of CORS issue uncommen this
+    /**
     app.use((req, res, next) => {
         res.header("Access-Control-Allow-Origin", "*");
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     });
+     */
 
     app.get('/customers.json', (req, res) => {
         col.find({}).toArray((error, documents) => {

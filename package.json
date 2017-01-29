@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "react-scripts": "0.8.5"
+    "concurrently": "^3.1.0",
+    "nock": "^9.0.2",
+    "react-scripts": "0.8.5",
+    "redux-mock-store": "^1.2.1"
   },
   "dependencies": {
     "assert": "^1.4.1",
@@ -20,9 +23,10 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"nodemon server.js\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "proxy": "http://localhost:5000/"
 }
