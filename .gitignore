@@ -13,3 +13,6 @@ npm-debug.log
 
 # vscode settings files
 .vscode
+
+# environment files
+.env

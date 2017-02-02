@@ -1,5 +1,15 @@
+
 // mongo node connection : mongodb://cauldyclark:kVR6hIGqt8qSte4yYDRN5LJut21O8vEkEYLRRJs3Z3enaNFdwlRtfklvWZVtLxvhB0X4cTsidzutF5uVV54BUQ==@cauldyclark.documents.azure.com:10250/store?ssl=true
 // mongo shell connection ; mongo cauldyclark.documents.azure.com:10250 -u cauldyclark -p kVR6hIGqt8qSte4yYDRN5LJut21O8vEkEYLRRJs3Z3enaNFdwlRtfklvWZVtLxvhB0X4cTsidzutF5uVV54BUQ== --ssl --sslAllowInvalidCertificates
+
+
+db.createUser(
+  {
+    user: "xz",
+    pwd: "Fastest15",
+    roles: [ { role: "readWrite", db: "crunchbase" } ]
+  }
+)
 
 db.users.insertMany([
     {

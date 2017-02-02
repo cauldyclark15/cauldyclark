@@ -1,6 +1,5 @@
 import React, { PropTypes, Component } from 'react';
 
-
 class Customer extends Component {
     render() {
         const { onClick, name, occupation, curr_balance } = this.props;
@@ -17,6 +16,13 @@ class Customer extends Component {
     
 }
 
+/*
+class Customer extends Component {
+    render() {
+        
+    }
+}
+*/
 
 Customer.propTypes = {
     onClick: PropTypes.func.isRequired,

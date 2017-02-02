@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import { fetchCustomers } from '../actions';
+import { fetchCustomers, fetchProducts } from '../actions';
 import Customer from './Customer';
 
 class AsyncCustomers extends Component {
     componentDidMount() {
         const { dispatch } = this.props;
         dispatch(fetchCustomers());
+        dispatch(fetchProducts());
     }
     render() {
         const { customers } = this.props;
@@ -39,7 +40,7 @@ function getVisibleCustomers(customers, filter) {
 }
 
 const mapStateToProps = (state) => ({
-    customers: getVisibleCustomers(state.posts.customers, state.customersFilter)
+    customers: getVisibleCustomers(state.storeContent.customers, state.customersFilter)
 });
 
 export default connect(

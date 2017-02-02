@@ -9,14 +9,19 @@ const customersFilter = (state = '', action) => {
     }
 }
 
-const posts = (state = {
+const storeContent = (state = {
     customers: [],
+    products: [],
 }, action) => {
     switch (action.type) {
-        case 'RECEIVE_POSTS':
+        case 'RECEIVE_CUSTOMERS':
             return Object.assign({}, state, {
                 customers: action.customers,
             });
+        case 'RECEIVE_PRODUCTS':
+            return Object.assign({}, state, {
+                products: action.products,
+            })
         default:
             return state;
     }
@@ -24,7 +29,7 @@ const posts = (state = {
 
 const rootReducer = combineReducers({
     customersFilter,
-    posts,
+    storeContent,
 });
 
 export default rootReducer;
