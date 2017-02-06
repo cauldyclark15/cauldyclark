@@ -1,34 +1,36 @@
 import React, { PropTypes, Component } from 'react';
+import { Button, Modal } from 'react-bootstrap';
+import { hideModal, appearModal } from '../actions';
 
 class Customer extends Component {
     render() {
-        const { onClick, name, occupation, curr_balance } = this.props;
+        const { name, occupation, curr_balance, showModal, dispatch } = this.props;
         return (
-            <button className="customer" onClick={onClick}>
-                <div className="data">
-                    <div>{name}</div>
-                    <div>{occupation}</div>
-                    <div>{curr_balance}</div>               
-                </div>
-            </button>
+            <div>
+                <Button onClick={() => {
+                    dispatch(appearModal());
+                }}>
+                    <h1>{name}</h1>
+                    <h3>{occupation}</h3>
+                    <h1>{curr_balance}</h1>
+                </Button>
+                <Modal show={showModal} onHide={() => {
+                    dispatch(hideModal());
+                }}>
+                    <Modal.Header closeButton>
+                        <Modal.Title>{name}</Modal.Title>
+                    </Modal.Header>
+                </Modal>
+            </div>
         )
     }
-    
 }
-
-/*
-class Customer extends Component {
-    render() {
-        
-    }
-}
-*/
 
 Customer.propTypes = {
-    onClick: PropTypes.func.isRequired,
     name: PropTypes.string.isRequired,
     occupation: PropTypes.string.isRequired,
     curr_balance: PropTypes.number.isRequired,
+    showModal: PropTypes.bool.isRequired,
 }
 
 export default Customer;

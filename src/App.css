@@ -1,9 +1,15 @@
-.customer {
-    color: green;
-    height: 90px;
-    width: 90px;
-    background-color: whitesmoke;
-    border: 1px solid red;
+.customers {
+    display: inline-block
+}
+
+.customers > button {
+    height: 220px;
+    width: 220px;
+}
+
+.counterPanel {
+    height: 30;
+    width: 30;
 }
 
 .data {

@@ -7,7 +7,7 @@ db.createUser(
   {
     user: "xz",
     pwd: "Fastest15",
-    roles: [ { role: "readWrite", db: "crunchbase" } ]
+    roles: [ { role: "readWrite", db: "kims" } ]
   }
 )
 
@@ -23,174 +23,63 @@ db.users.insertMany([
 ])
 db.customers.insertMany([
     {
-        name: "jc",
-        occupation: "engineer",
-        purchased: [
-            {
-                name: "skyflakes",
-                qty: 4,
-                price: 5,
-                total: 20,
-                date: new Date()
-            },
-            {
-                name: "coke",
-                qty: 1,
-                price: 8,
-                total: 8,
-                date: new Date()
-            },
-            {
-                name: "maxx",
-                qty: 10,
-                price: 1,
-                total: 10,
-                date: new Date()
-            }           
-        ],
-        prev_balance: 38,
-        last_payment: {
-            amount: 30,
-            date: new Date()
-        },
-        curr_balance: 8
+        name: "Jc",
+        position: "Engineer",
+        purchased: [],
+        payments: [],
+        curr_balance: 0,
+        date_joined: new Date()
     },
     {
-        name: "franki",
-        occupation: "engineer",
-        purchased: [
-            {
-                name: "skyflakes",
-                qty: 4,
-                price: 5,
-                total: 20,
-                date: new Date()
-            },
-            {
-                name: "coke",
-                qty: 1,
-                price: 8,
-                total: 8,
-                date: new Date()
-            },
-            {
-                name: "maxx",
-                qty: 10,
-                price: 1,
-                total: 10,
-                date: new Date()
-            }           
-        ],
-        prev_balance: 38,
-        last_payment: {
-            amount: 30,
-            date: new Date()
-        },
-        curr_balance: 8 
+        name: "Francis",
+        position: "Engineer",
+        purchased: [],
+        payments: [],
+        curr_balance: 0,
+        date_joined: new Date()
     },
     {
-        name: "dauzmoves",
-        occupation: "engineer",
-        purchased: [
-            {
-                name: "skyflakes",
-                qty: 4,
-                price: 5,
-                total: 20,
-                date: new Date()
-            },
-            {
-                name: "coke",
-                qty: 1,
-                price: 8,
-                total: 8,
-                date: new Date()
-            },
-            {
-                name: "maxx",
-                qty: 10,
-                price: 1,
-                total: 10,
-                date: new Date()
-            }           
-        ],
-        prev_balance: 38,
-        last_payment: {
-            amount: 30,
-            date: new Date()
-        },
-        curr_balance: 8
+        name: "Dauz",
+        position: "Engineer",
+        purchased: [],
+        payments: [],
+        curr_balance: 0,
+        date_joined: new Date()
     },
     {
-        name: "sampip",
-        occupation: "engineer",
-        purchased: [
-            {
-                name: "skyflakes",
-                qty: 4,
-                price: 5,
-                total: 20,
-                date: new Date()
-            },
-            {
-                name: "coke",
-                qty: 1,
-                price: 8,
-                total: 8,
-                date: new Date()
-            },
-            {
-                name: "maxx",
-                qty: 10,
-                price: 1,
-                total: 10,
-                date: new Date()
-            }           
-        ],
-        prev_balance: 38,
-        last_payment: {
-            amount: 30,
-            date: new Date()
-        },
-        curr_balance: 8      
+        name: "Dauz",
+        position: "Engineer",
+        purchased: [],
+        payments: [],
+        curr_balance: 0,
+        date_joined: new Date()
+    }
+])
+db.products.insertMany([
+    {
+        name: "maxx",
+        price: 1,
+        date_registered: new Date()
+    },
+    {
+        name: "coke",
+        price: 8,
+        date: new Date()
+    },
+    {
+        name: "skyflakes",
+        price: 5,
+        date: new Date()
     }
 ])
 
-db.customers.insertOne({
-        name: "sampip",
-        occupation: "engineer",
-        purchased: [
-            {
-                name: "skyflakes",
-                qty: 4,
-                price: 5,
-                total: 20,
-                date: new Date()
-            },
-            {
-                name: "coke",
-                qty: 1,
-                price: 8,
-                total: 8,
-                date: new Date()
-            },
-            {
-                name: "maxx",
-                qty: 10,
-                price: 1,
-                total: 10,
-                date: new Date()
-            }           
-        ],
-        prev_balance: 38,
-        last_payment: {
-            amount: 30,
-            date: new Date()
-        },
-        curr_balance: 8 
-})
-db.products.insertOne({
-    name: "maxx",
-    price: 1,
-    date: new Date()
-})
+db.customers.insertOne(
+    {
+        name: "Sam",
+        position: "Engineer",
+        purchased: [],
+        payments: [],
+        curr_balance: 0,
+        date_joined: new Date()
+    }
+)
