@@ -1,12 +1,17 @@
-import React from 'react';
-import AsyncCustomers from './AsyncCustomers';
-import SearchCustomer from './SearchCustomer';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-const Root = () => (
-    <div>
-        <SearchCustomer />
-        <AsyncCustomers />
-    </div>
-)
+import Header from './Header';
 
-export default Root;
+class Root extends Component {
+    render() {
+        return (
+            <div>
+                <Header pusher={this.props.router.push}/>
+                {this.props.children}
+            </div>
+        );
+    }
+}
+
+export default connect()(Root);

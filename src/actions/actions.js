@@ -5,19 +5,19 @@ import fetch from 'isomorphic-fetch';
 export const setCustomerFilter = (filter) => ({
     type: 'SET_CUSTOMER_FILTER',
     filter,
-});
+})
 
 // map products with each customers
-export const mapCustomerToProducts = (customer, products) => ({
+export const mapCustomerToProducts = (id, products) => ({
     type: 'MAP_CUSTOMER_PRODUCTS',
-    customer,
+    id,
     products,
 })
 
 // toggle showmodal appearance status
-export const appearModal = (name) => ({
+export const appearModal = (id) => ({
     type: 'SHOW_MODAL',
-    name,
+    id,
 })
 
 export const hideModal = () => ({
@@ -32,17 +32,38 @@ const requestCustAndProd = () => ({
 const receiveCustomers = (customers) => ({
     type: 'RECEIVE_CUSTOMERS',
     customers,
-});
+})
 
 const receiveProducts = (products) => ({
     type: 'RECEIVE_PRODUCTS',
     products,
-});
+})
 
 const receiveAll = () => ({
     type: 'RECEIVE_ALL',
 })
 
+// increment and decrement product purchase counter
+
+export const incrementProd = (id, product) => ({
+    type: 'INCREMENT_PROD',
+    id,
+    product,
+})
+
+export const decrementProd = (id, product) => ({
+    type: 'DECREMENT_PROD',
+    id,
+    product,
+})
+
+// save purchased products
+
+export const computePurchased = (custProdMap, id) => ({
+    type: 'COMPUTE_PURCHASED',
+    custProdMap,
+    id,
+})
 
 // ASYNC 
 export const fetchCustomers = () => {
@@ -74,7 +95,7 @@ export const fetchCustomersAndProducts = (customers, products) => {
                 dispatch(receiveProducts(values[1]));
                 dispatch(receiveAll());
                 values[0].forEach(customer => {
-                    dispatch(mapCustomerToProducts(customer.name, values[1]));
+                    dispatch(mapCustomerToProducts(customer._id, values[1]));
                 })
             })
     }

@@ -1,17 +1,58 @@
+body {
+    font-family: 'Sansita', sans-serif !important;
+    background-image: url("./images/cars_bg.jpg");
+}
+
 .customers {
-    display: inline-block
+    height: 190px;
+    width: 190px;
+    margin: 5px;
 }
 
-.customers > button {
-    height: 220px;
-    width: 220px;
-}
-
-.counterPanel {
-    height: 30;
-    width: 30;
+.counterBoard {
+    height: 168px;
+    width: 135px;
+    border: .5px solid lightgray;
+    margin: 5px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
 }
 
 .data {
     text-align: center;
 }
+
+:local(.kimNavbar) {
+    margin-bottom: 0px !important;
+    background: #F8BBD0 !important;
+}
+
+.cSearch {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.cWhite {
+    color: white;
+    font-size: 25px;
+}
+
+.cNav {
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+.cLog {
+    color: white;
+    font-size: 16px;
+}
+
+.cWhite:hover, .cNav:hover {
+    color: #E91E63;
+}
+
+.cLog:hover {
+    color: black;
+}
+

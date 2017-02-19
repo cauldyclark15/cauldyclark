@@ -1,13 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setCustomerFilter } from '../actions';
+
+import { setCustomerFilter } from '../../actions/actions';
 
 let SearchCustomer = ({dispatch}) => {
     let textInput;
     return (
-        <div>
+        <div className="cSearch">
             <input 
                 type="text"
+                className="cInput"
                 ref={node => {
                     textInput = node;
                 }}
@@ -15,6 +17,7 @@ let SearchCustomer = ({dispatch}) => {
                 placeholder="Enter customer name"
             />
             <button
+                className="cButton"
                 onClick={() => {
                     dispatch(setCustomerFilter(''));
                     textInput.value = '';

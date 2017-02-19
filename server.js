@@ -8,6 +8,7 @@ const assert = require('assert');
 const app = express();
 let port = normalizePort(process.env.PORT || '5000');
 
+// static server
 // app.use(express.static('./build'));
 
 // app.get('/', (req, res) => {
